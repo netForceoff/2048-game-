@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+.game {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: #464451;
+}
+
+.game .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 12vmin;
+    width: 80vmin;
+    font-size: 10vmin;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+.game .field {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 80vmin;
+    width: 80vmin;
+}
+
+.game .field .cells {
+    display: flex;
+    margin: 1vmin;
+    box-sizing: border-box;
+    background: white;
+    border-radius: 2vmin;
+    justify-content: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    line-height: 120px;
+    font-size: 40px;
+    transition: background 0.5s;
+}
+
+@keyframes example {
+  from {opacity: 1}
+  to {opacity: 0;}
+}
+
+
+.game .field .cells.animate {
+  position: absolute;
+  transition: left 0.5s, top 0.5s;
+
+  animation-name: example;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.game .field .cells[data-color="2"] {
+  background: red;
+}
+
+.game .field .cells[data-color="4"] {
+  background: #911E42;
+}
+
+.game .field .cells[data-color="8"] {
+  background: #BD33A4;
+}
+
+.game .field .cells[data-color="16"] {
+  background: #0095B6;
+}
+
+.game .field .cells[data-color="32"] {
+  background: #00BFFF;
+}
+
+.game .field .cells[data-color="64"] {
+  background: #4B0082;
+}
+
+.game .field .cells[data-color="128"] {
+  background: #00FF00;
+}
+
+.game .field .cells[data-color="256"] {
+  background: #FF00FF;
+}
+
+.game .field .cells[data-color="512"] {
+  background: #120A8F;
+}
+
+.game .field .cells[data-color="1024"] {
+  background: #C71585;
+}
+
+.game .field .cells[data-color="2048"] {
+  background: #F7F21A;
+}
+
+.game .field .cells[data-color="4096"] {
+  background: #E3256B;
+}
+
+.game .field .cells[data-color="8192"] {
+  background: #943391;
+}
